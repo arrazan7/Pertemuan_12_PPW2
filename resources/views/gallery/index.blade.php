@@ -26,6 +26,7 @@
                                                         </form>
                                                         <form action="{{ route('gallery.destroy', $gallery->picture) }}" method="POST">
                                                             @csrf
+                                                            @method('DELETE')
                                                             <button class="btn btn-sm btn-danger" onClick="return confirm('Apakah Anda yakin ingin dihapus?')">Hapus</button>
                                                         </form>
                                                     </div>
