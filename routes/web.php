@@ -39,9 +39,11 @@ Route::post('/users/update/{id}', [UserController::class, 'update'])->name('meng
 Route::get('/send-mail', [SendEmailController::class, 'index'])->name('kirim-email');
 Route::post('/post-email', [SendEmailController::class, 'store'])->name('post-email');
 
-Route::get('/gallery', [GalleryController::class,'index'])->name('menampilkan_gallery');
-Route::get('/gallery_create', [GalleryController::class,'create'])->name('menambah_gallery');
-Route::post('/gallery_store', [GalleryController::class,'store'])->name('menyimpan_gallery');
-Route::get('/gallery/edit/{id}', [GalleryController::class,'edit'])->name('mengedit_gallery');
-Route::post('/gallery/update/{id}', [GalleryController::class,'update'])->name('mengupdate_gallery');
-Route::post('/gallery/delete/{id}', [GalleryController::class,'destroy'])->name('menghapus_gallery');
+// Route::get('/gallery', [GalleryController::class,'index'])->name('menampilkan_gallery');
+// Route::get('/gallery_create', [GalleryController::class,'create'])->name('menambah_gallery');
+// Route::post('/gallery_store', [GalleryController::class,'store'])->name('menyimpan_gallery');
+// Route::get('/gallery/edit/{id}', [GalleryController::class,'edit'])->name('mengedit_gallery');
+// Route::post('/gallery/update/{id}', [GalleryController::class,'update'])->name('mengupdate_gallery');
+// Route::post('/gallery/delete/{id}', [GalleryController::class,'destroy'])->name('menghapus_gallery');
+
+Route::resource('gallery', GalleryController::class);

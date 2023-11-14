@@ -29,7 +29,7 @@
                         <a class="nav-link {{ (request()->is('register')) ? 'active' : '' }}" href="{{ route('panggil_register') }}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ (request()->is('gallery')) ? 'active' : '' }}" href="{{ route('menampilkan_gallery') }}">Gallery</a>
+                        <a class="nav-link {{ (request()->is('gallery')) ? 'active' : '' }}" href="{{ route('gallery.index') }}">Gallery</a>
                     </li>
                     @else
                     <li class="nav-item dropdown">

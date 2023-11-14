@@ -7,7 +7,7 @@
                 <div class="col-md-8">
                     <div class="card stroke-white bg-primary-gradient text-dark">
                         <div class="card-header d-flex justify-content-between align-items-center">Dashboard
-                            <a href="{{ route('menambah_gallery') }}" class="btn btn-primary">Add Image</a>
+                            <a href="{{ route('gallery.create') }}" class="btn btn-primary">Add Image</a>
                         </div>
                         <div class="card-body">
                             <div class="row">
@@ -20,11 +20,11 @@
                                                         <img class="example-image img-fluid mb-2" src="{{asset('storage/posts_image/'.$gallery->picture )}}" alt="image-1" />
                                                     </a>
                                                     <div class="col gap-1 image-actions">
-                                                        <form action="{{ route('mengedit_gallery', $gallery->picture) }}" method="GET">
+                                                        <form action="{{ route('gallery.edit', $gallery->picture) }}" method="GET">
                                                             @csrf
-                                                            <button class="btn btn-sm btn-primary-gradient">Edit</button>
+                                                            <button class="btn btn-sm btn-dark">Edit</button>
                                                         </form>
-                                                        <form action="{{ route('menghapus_gallery', $gallery->picture) }}" method="POST">
+                                                        <form action="{{ route('gallery.destroy', $gallery->picture) }}" method="POST">
                                                             @csrf
                                                             <button class="btn btn-sm btn-danger" onClick="return confirm('Apakah Anda yakin ingin dihapus?')">Hapus</button>
                                                         </form>

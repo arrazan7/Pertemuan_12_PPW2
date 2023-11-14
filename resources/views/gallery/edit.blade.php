@@ -4,7 +4,7 @@
     <div class="row justify-content-center mt-5">
         <div class="col-md-8">
             <div class="container text-white">
-                <form action="{{ route('mengupdate_gallery', $gallery) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('gallery.update', $gallery) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="mb-3 row">

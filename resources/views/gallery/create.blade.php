@@ -8,7 +8,7 @@
                         <div class="card stroke-white bg-primary-gradient text-dark">
                             <div class="card-header d-flex justify-content-between align-items-center stroke-white">Add Image</div>
                             <div class="card-body">
-                                <form action="{{ route('menyimpan_gallery') }}" method="POST" enctype="multipart/form-data">
+                                <form action="{{ route('gallery.store') }}" method="POST" enctype="multipart/form-data">
                                     @csrf
                                         <div class="mb-3 row">
                                             <label for="title" class="col-md-4 col-form-label text-md-end text-start">

@@ -76,7 +76,7 @@ class GalleryController extends Controller
         $post->description = $request->input('description');
         $post->save();
         
-        return redirect('/gallery')->with('success', 'Berhasil menambahkan data baru');
+        return redirect('gallery')->with('success', 'Berhasil menambahkan data baru');
     }
 
     public function createThumbnail($path, $width, $height)
